@@ -1,0 +1,140 @@
+/* Reset */
+::before,
+::after,
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* project stuffs */
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  /* the rules above is just for presentation purposes */
+  background: var(--dark-blue);
+  font-size: 0.9375rem;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --dark-blue: #0a0c1b;
+  --white: #fff;
+  --dark-purple: #8c8ba0;
+  --accent-blue: #1c1937;
+  --dark-purple2: #7a798f;
+  --purple: #a860d5;
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.bg-accent-blue {
+  background-color: var(--accent-blue);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-dark-purple {
+  color: var(--dark-purple);
+}
+
+.text-dark-purple-2 {
+  color: var(--dark-purple2);
+}
+
+.text-purple {
+  color: var(--purple);
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.fs-2 {
+  font-size: 2rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.card {
+  display: flex;
+  flex-direction: column-reverse;
+
+  text-align: center;
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+
+.card__text {
+  padding: 2rem;
+}
+
+.card__content {
+  line-height: 1.6;
+}
+
+picture {
+  background-image: url(../images/image-header-mobile.jpg);
+  background-color: var(--purple);
+  background-blend-mode: overlay;
+  background-size: cover;
+
+  border-radius: 0.5rem 0.5rem 0 0;
+  aspect-ratio: 1 / 1;
+}
+
+.stats {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 4rem;
+}
+
+/* above 375px; */
+@media (min-width: 23.5em) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 97ch;
+    text-align: start;
+  }
+
+  picture {
+    background-image: url(../images/image-header-desktop.jpg);
+    border-radius: 0 0.5rem 0.5rem 0;
+    aspect-ratio: unset;
+  }
+
+  .stats {
+    display: flex;
+  }
+
+  .stats > * {
+    flex-basis: 100%;
+  }
+}
+
+.stats__text {
+  margin-top: 0.2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  color: var(--dark-purple2);
+  letter-spacing: 0.1rem;
+}
