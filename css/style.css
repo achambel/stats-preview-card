@@ -86,13 +86,18 @@ body {
 }
 
 picture {
-  background-image: url(../images/image-header-mobile.jpg);
   background-color: var(--purple);
-  background-blend-mode: overlay;
-  background-size: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
 
-  border-radius: 0.5rem 0.5rem 0 0;
-  aspect-ratio: 1 / 1;
+img {
+  object-fit: cover;
+  height: 100%;
+  pointer-events: none;
+
+  mix-blend-mode: multiply;
+  opacity: 0.8;
 }
 
 .stats {
@@ -115,9 +120,7 @@ picture {
   }
 
   picture {
-    background-image: url(../images/image-header-desktop.jpg);
     border-radius: 0 0.5rem 0.5rem 0;
-    aspect-ratio: unset;
   }
 
   .stats {
